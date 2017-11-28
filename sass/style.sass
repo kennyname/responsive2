@@ -1,0 +1,533 @@
+/*start common style*/
+*
+	margin: 0
+	padding: 0
+body
+	font-size: 20px
+	font-family: 'EB Garamond', serif
+.main-wrapper
+	width: 100%
+	overflow: hidden
+li
+	list-style: none
+a
+	text-decoration: none
+section:after
+	content: ' '
+	display: block
+	clear: both
+/*end common style*/
+
+/*start nav and header style*/
+
+header
+	width: 100%
+	height: 100vh
+	background-size: cover
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("../src/img/header-bg.jpg") no-repeat center
+	float: right
+	transition: width .5s
+	.center-text
+		width: 80%
+		position: absolute
+		top: 40%
+		left: 10%
+		text-align: center
+		text-transform: uppercase
+		h1
+			font-size: 300%
+			margin-bottom: 2%
+			color: white
+		p
+			font-size: 150%
+			color: #eee
+			margin-bottom: 3%
+		a
+			background: transparent
+			color: #fff
+			border: solid 2px white
+			padding: 1% 2%
+			border-radius: 20px
+			margin-right: 1%
+			transition: background .2s
+			&:hover
+				background: #555
+	label
+		i.fa.fa-bars
+			font-size: 150%
+			padding: 10px
+			color: white
+			position: fixed
+			&:hover
+				background-color: #ccc
+	.header-nav
+		position: fixed
+		top: 0
+		left: -20%
+		opacity: 1
+		width: 20%
+		height: 100vh
+		background: #e6e9f0
+		transition: left .5s
+		z-index: 200
+		ul
+			margin-top: 10%
+			li
+				margin-bottom: 5%
+				border-bottom: solid 1px #c2dde6
+				padding-left: 5%
+				a
+					display: inline-block
+					padding: 5% 0 0 3%
+					border-top: solid 2px transparent
+					color: #777
+					font-weight: bold
+					width: 80%
+					transition: color .2s, border-top .2s
+					&:hover
+						color: #333
+						border-top: solid 2px #333
+
+#nav-control:checked
+	~ .header-clear header
+		width: 80%
+		.header-nav
+			left: 0
+.header-clear:after
+	content: ''
+	display: block
+	clear: both
+
+/*end header and nav*/
+
+/*start image section style*/
+
+.one-of-two-sections
+	height: auto
+	width: 90%
+	margin: auto
+	h2
+		text-align: center
+		margin: 4% 0 2% 0
+		color: #555
+	figure
+		margin: 1%
+		position: relative
+		width: 31.333%
+		float: left
+		overflow: hidden
+		figcaption
+			position: absolute
+			top: 0
+			font-weight: bolder
+			color: #fff
+			background: linear-gradient(to right,#333, #aaa)
+		img
+			width: 100%
+			margin: 0
+			opacity: 0.8
+			transform: scale(1.09, 1.09)
+			transition: transform .5s, opacity .5s
+			&:hover
+				transform: scale(1.3, 1.3)
+				opacity: 1
+
+.second figure
+	figcaption
+		position: static
+		text-align: center
+		background: none
+		color: #555
+	img
+		width: 100%
+		margin: 0
+		opacity: 0.8
+		transform: scale(0.7, 0.7)
+		&:hover
+			transform: scale(1, 1)
+			opacity: 1
+/*end image section*/
+
+/*start our-team section*/
+
+.our-team
+	width: 90%
+	margin: 3% auto
+	overflow: hidden
+	h1
+		text-align: center
+		margin-bottom: 2%
+		color: #555
+	.column
+		width: 31.333%
+		float: left
+		margin: 0 1%
+		img
+			opacity: 1
+			width: 100%
+			display: block
+			margin: auto
+			transition: opacity .4s
+			&:hover
+				opacity: 0.9
+		details
+			font-weight: bolder
+			font-size: 120%
+			padding: 2% 0
+			color: #555
+			p
+				text-align: justify
+/*end team section*/
+
+/*start video section*/
+
+.video
+	width: 100%
+	background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('../src/video/video-bg.jpg') no-repeat center
+	background-size: cover
+	padding: 5% 0
+	margin-bottom: 3%
+	.video-wrapper
+		// border: solid 2px
+		width: 50%
+		float: right
+		video
+			// border: solid 2px
+			width: 60%
+			margin-left: 20%
+	.text-wrapper
+		width: 45%
+		float: right
+		color: #fff
+		text-align: center
+		p
+			text-align: justify
+/*end video section*/
+
+/*start google map section*/
+
+.google-map
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../src/img/google-map-bg.jpg') no-repeat center
+	background-size: cover
+	padding: 2% 0
+	h2
+		color: #fff
+		text-align: center
+		padding: 1%
+		margin: auto
+	.map
+		iframe
+			min-height: 340px
+			width: 90%
+			margin: 2% 5%
+	div
+		width: 50%
+		float: left
+		form
+			width: 90%
+			margin: auto
+			input,textarea
+				display: block
+				width: 90%
+				margin: 1% 5%
+				padding: 1% 0
+				font-size: 90%
+				background: #fff
+			input[type='submit']
+				width: 25%
+				background-color: #555
+				color: #fff
+				transition: background .2s , color .2s
+				&:hover
+					background-color: #fff
+					color: #555
+/*end google map section*/
+
+/*start gallery section*/
+.gallery
+	background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),url('../src/img/gallery-imgs/gallery-bg.jpg') no-repeat center
+	background-size: cover
+	margin: 4% 0 0 0
+	width: 100%
+	height: auto
+	padding: 12% 0
+	img
+		display: block
+		width: 10%
+		height: auto
+		float: left
+		transform: scale(1.3,1.3) rotate(35deg)
+		opacity: 0.3
+		transition: transform .4s , opacity .4s
+		&:hover
+			transform: scale(2.6,2.6) rotate(0deg)
+			opacity: 1
+			position: relative
+			z-index: 100
+			&:first-child
+				transform: scale(2.6,2.6) rotate(0deg) translateX(35%)
+			&:last-child
+				transform: scale(2.6,2.6) rotate(0deg) translateX(-35%)
+/*end gallery section*/
+
+/*start footer*/
+
+footer
+	width: 100%
+	padding: 5% 0 1% 0
+	background: url('../src/img/footer-bg.png') no-repeat top
+	background-color: #4169e1
+	background-size: cover
+	overflow: auto/*fix float*/
+	div
+		width: 33.333%
+		float: left
+		h3,p
+			color: #ddd
+			text-align: center
+			margin-bottom: 10px
+	.stay-tuned
+		a
+			width: 50%
+			margin: 2px auto
+			display: block
+			text-align: center
+			i.fa
+				width: 100%
+				padding: 5px 0
+				border: solid 1px #eee
+				color: #ddd
+				font-size: 120%
+				&:hover
+					color: #fff
+			i.fa-facebook:hover
+				background-color: #3b5998
+			i.fa-google-plus:hover
+				background-color: #dd4b39
+			i.fa-twitter:hover
+				background-color: #55acee
+			i.fa-instagram:hover
+				background-color: #125688
+	.email
+		form
+			input
+				display: block
+				margin: 13% auto 0 auto
+				font-size: 90%
+				border: solid 2px #ccc
+				width: 60%
+				padding: 1%
+				background: transparent
+				color: #ddd
+				&:focus
+					border: solid 2px #fff
+	.languages
+		a
+			display: block
+			width: 30%
+			margin: 4% auto
+			color: #ddd
+			&:hover
+				color: #fff
+		#en:before
+			content: url('../src/img/language-icons/USA-icon.png')
+			margin-right: 5px
+		#sp:before
+			content: url('../src/img/language-icons/Spain-icon.png')
+			margin-right: 5px
+		#fr:before
+			content: url('../src/img/language-icons/France-icon.png')
+			margin-right: 5px
+		#it:before
+			content: url('../src/img/language-icons/Italy-icon.png')
+			margin-right: 5px
+	h2
+		width: 80%
+		margin: auto
+		padding: 3% 0 2% 0
+		font-size: 100%
+		font-style: italic
+		text-align: center
+		color: #777
+/*end footer*/
+
+/*start responsivve 768px*/
+
+@media only screen and (max-width: 768px)
+	body
+		font-size: 18px
+	/*start nav*/
+	header
+		.center-text
+			h1
+				font-size: 200%
+				margin-bottom: 10%
+			p
+				font-size: 110%
+				margin-bottom: 10%
+			a
+				width: 100%
+				padding: 2% 3%
+				font-size: 110%
+				text-transform: capitalize
+		.header-nav
+			width: 50%
+			left: -50%
+			ul
+				a
+					font-size: 110%
+					padding: 5% 0 0 8%
+	#nav-control:checked
+		~ .header-clear
+			header
+				width: 50%
+	/*end navigation*/
+
+	/*start image section*/
+
+	.one-of-two-sections
+		width: 100%
+		figure
+			float: none
+			width: 95%
+			margin: 0 auto 5% auto
+	.second
+		figure
+			img
+				transform: scale(0.8, 0.8)
+	/*end image section*/
+
+	/*start team section*/
+	.our-team
+		width: 100%
+		.column
+			float: none
+			width: 100%
+			margin-bottom: 3%
+			details summary
+				font-size: 100%
+	/*end team section*/
+
+	/*start video section*/
+	.video
+		padding: 0
+		.video-wrapper
+			float: none
+			width: 100%
+			overflow: hidden
+			margin-bottom: 5%
+			video
+				width: 100%
+				margin: 0
+		.text-wrapper
+			float: none
+			width: 100%
+			p
+				padding: 03% 4% 3%
+	/*end video section*/
+
+	/*start googlemap section*/
+	.google-map
+		div
+			width: 100%
+			float: none
+			form
+				width: 100%
+	/*end googlemap section*/
+
+	/*start gallery section*/
+	.gallery
+		img
+			float: none
+			width: 50%
+			margin: 5% auto
+			opacity: 0.6
+			transform: scale(1.3,1.3) rotate(20deg)
+			&:hover
+				transform: scale(1.9,1.9) rotate(0deg)
+				&:first-child,&:last-child
+					transform: scale(1.9,1.9) rotate(0deg)
+	/*end image gallery*/
+
+	/*start footer*/
+	footer
+		div
+			width: 100%
+			float: none
+			margin-bottom: 10%
+		.email
+			form
+				input
+					margin: 4% auto
+		.languages
+			text-align: center
+			a
+				width: 40%
+				margin-left: 30%
+	/*end footer*/
+	/*end 768px responsive*/
+
+/*start responsive between 769 and 1024px*/
+@media only screen and (max-width: 1024px) and (min-width: 769px)
+	/*start nav*/
+	header
+		.header-nav
+			width: 30%
+			left: -30%
+	#nav-control:checked ~.header-clear header
+		width: 70%
+	/*end nav*/
+
+	/*start image section*/
+	.one-of-two-sections
+		width: 100%
+	/*end image section*/
+
+	/*start team section*/
+	.our-team
+		width: 100%
+	/*end team section*/
+
+	/*start video section*/
+	.video
+		.text-wrapper
+			margin: 5% auto
+		.video-wrapper
+			video
+				width: 90%
+				margin: 10% 5%
+	/*end video section*/
+
+	/*start gallery section*/
+
+	.gallery
+		padding: 20% 0
+		img:nth-child(even)
+			margin-top: 3%
+			&:hover
+				transform: scale(3.8,3.8) rotate(0deg) translate(14%,35%)
+		img:nth-child(odd)
+			&:hover
+				transform: scale(3.8,3.8) rotate(0deg) translate(-14%,-35%)
+		img
+			&:hover
+				&:first-child
+					transform: scale(3.8,3.8) rotate(0deg) translate(40%,-35%)
+				&:last-child
+					transform: scale(3.8,3.8) rotate(0deg) translate(-40%,35%)
+	/*end gallery section*/
+
+	/*start footer*/
+	footer
+		div
+			width: 30%
+		.languages
+			a
+				width: 50%
+	/*end footer*/
+
+	/*end 1024 and 769 responsive*/
+
+
+
+
